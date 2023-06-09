@@ -9,6 +9,7 @@ class Item(BaseModel):
     sale: int
     rating: int
     volume: int
+    supplierId: int
 
     @root_validator(pre=True)
     def convert_sale_price(cls, values: dict):
