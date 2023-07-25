@@ -10,6 +10,8 @@ class Item(BaseModel):
     rating: int
     volume: int
     supplierId: int
+    pics: int
+    image_links: str = None
 
     @root_validator(pre=True)
     def convert_sale_price(cls, values: dict):
@@ -21,3 +23,4 @@ class Item(BaseModel):
 
 class Items(BaseModel):
     products: list[Item]
+
