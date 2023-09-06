@@ -1,4 +1,4 @@
-from pydantic import BaseModel, root_validator
+from pydantic import BaseModel, root_validator, field_validator
 
 
 class Item(BaseModel):
@@ -12,15 +12,20 @@ class Item(BaseModel):
     supplierId: int
     pics: int
     image_links: str = None
+    root: int
+    feedback_count: int = None
+    valuation: str = None
 
-    @root_validator(pre=True)
-    def convert_sale_price(cls, values: dict):
-        sale_price = values.get("salePriceU")
+    @field_validator('salePriceU')
+    def convert_sale_price(cls, sale_price: int) -> float:
         if sale_price is not None:
-            values["salePriceU"] = sale_price / 100
-        return values
+            return sale_price / 100
 
 
 class Items(BaseModel):
     products: list[Item]
 
+
+class Feedback(BaseModel):
+    feedbackCountWithText: int
+    valuation: str
