@@ -12,7 +12,7 @@ https://youtu.be/k3P4lrzzxnI (часть 2: парсим товары одног
 
 https://youtu.be/B8nxNK9QU0c (часть 3: парсинг картинок)
 
-https://youtu.be/skpMbVn-DBo?si=82u5bMu9pL0fxX64 (часть 4: парсинг картинок)
+https://youtu.be/skpMbVn-DBo?si=82u5bMu9pL0fxX64 (часть 4: работа с отзывами)
 
 ## Установка
 
