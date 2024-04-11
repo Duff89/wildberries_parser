@@ -92,8 +92,14 @@ class ParseWB:
                 basket = '11'
             elif 1656 <= _short_id <= 1919:
                 basket = '12'
-            else:
+            elif 1920 <= _short_id <= 2045:
                 basket = '13'
+            elif 2046 <= _short_id <= 2189:
+                basket = '14'
+            elif 2190 <= _short_id <= 2405:
+                basket = '15'
+            else:
+                basket = '16'
 
             """Делаем список всех ссылок на изображения и переводим в строку"""
             link_str = "".join([
